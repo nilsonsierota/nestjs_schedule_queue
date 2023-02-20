@@ -8,3 +8,8 @@ services:
       - 3000:3000
     volumes:
       - .:/home/node/app
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.2.6-alpine3.14
